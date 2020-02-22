@@ -1,6 +1,6 @@
 import time
 from binary_search_tree import BinarySearchTree
-
+# Remember when you run this file you haev to run from command line and dont use vs code extension use "python {file name} :)"
 start_time = time.time()
 
 f = open('names_1.txt', 'r')
