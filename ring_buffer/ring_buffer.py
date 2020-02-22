@@ -4,7 +4,7 @@ from doubly_linked_list import DoublyLinkedList
 class RingBuffer:
     def __init__(self, capacity):
         self.capacity = capacity
-        self.current = None
+        self.current = 0
         self.storage = DoublyLinkedList()
 
     def append(self, item):
@@ -16,7 +16,6 @@ class RingBuffer:
         else:
             i = 0
             current_node = self.storage.head
-
             while i < self.current:
                 if not current_node.next:
                     self.storage.add_to_tail(item)
@@ -40,6 +39,7 @@ class RingBuffer:
             start_node = start_node.next
             list_buffer_contents.append(start_node.value)
         return list_buffer_contents
+
 
 # ----------------Stretch Goal-------------------
 
